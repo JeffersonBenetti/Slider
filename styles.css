@@ -160,3 +160,77 @@ header a {
     color: #000;
     transition: 0.7s;
 }
+
+/* Animação dos textos principais */
+.container .list .list-item:nth-last-child(1) .content .title,
+.container .list .list-item:nth-last-child(1) .content .description,
+.container .list .list-item:nth-last-child(1) .content .buttons {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.container .list .list-item:nth-last-child(1) .content .title {
+    animation-delay: 1.2s;
+}
+
+.container .list .list-item:nth-last-child(1) .content .description {
+    animation-delay: 1.6s;
+}
+
+.container .list .list-item:nth-last-child(1) .content .buttons {
+    animation-delay: 2s;
+}
+
+/* Animação: Movimento da thumb */
+.container.next .thumb {
+    animation: effectnextThumb 0.5s linear 1 forwards;
+}
+
+@keyframes effectnextThumb {
+    from {
+        transform: translateX(150px);
+    }
+}
+
+/* Animação da última thumb */
+.container.next .thumb .thumb-item:nth-last-child(1) {
+    animation: effectLastThumb 0.5s linear 1 forwards;
+}
+
+@keyframes effectLastThumb {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+/* Animação da imagem principal "NEXT" */
+.container.next .list .list-items:nth-last-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showMainImagem 0.5s linear 1 forwards;
+}
+
+@keyframes showMainImagem {
+    to {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
