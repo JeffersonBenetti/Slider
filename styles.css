@@ -215,7 +215,7 @@ header a {
 }
 
 /* Animação da imagem principal "NEXT" */
-.container.next .list .list-items:nth-last-child(1) img {
+.container.next .list .list-item:nth-last-child(1) img {
     width: 150px;
     height: 220px;
     position: absolute;
